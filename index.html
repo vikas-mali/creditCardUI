@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    </link>
+    <title>Credit Card UI</title>
+</head>
+
+<body>
+    <div class="containerWrapper">
+        <div class="containerInner">
+            <div class="formWrapper">
+                <div class="cardWrapper">
+                    <div class="cardInner">
+                        <div class="cardFSide active">
+                            <div class="cardHeader">
+                                <div class="cardChip">
+                                    <img class="cardChip" src="images/card_chip.png" alt="">
+                                </div>
+                                <div class="cardLogo">
+                                    <img class="cardLogo" src="images/master-card-logo.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cardNumberWrapper">
+                                <div class="cardNumber">
+                                    <div class="fieldOne">
+                                        <input class="cardNumberInput" type="text" name="cardNumber1" value=""
+                                            maxlength="4" disabled>
+                                    </div>
+                                    <div class="fieldTwo">
+                                        <input class="cardNumberInput" type="text" name="cardNumber2" value=""
+                                            maxlength="4" disabled>
+                                    </div>
+                                    <div class="fieldThree">
+                                        <input class="cardNumberInput" type="text" name="cardNumber3" value=""
+                                            maxlength="4" disabled>
+                                    </div>
+                                    <div class="fieldFour">
+                                        <input class="cardNumberInput" type="text" name="cardNumber4" value=""
+                                            maxlength="4" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cardFooter">
+                                <div class="cardHDetails">
+                                    <div class="cardHNameLabel">
+                                        Card Holder
+                                    </div>
+                                    <div class="cardHName">
+                                        Full Name
+                                    </div>
+                                </div>
+                                <div class="cardValidDetails">
+                                    <div class="cardELabel">
+                                        Expires
+                                    </div>
+                                    <div class="cardEDate">
+                                        <span class="month">MM</span>/<span class="year">YYYY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardBSide">
+                            <div class="magneticChip"></div>
+                            <div class="cardCVVWrapper">
+                                <div class="cvvLabel">CVV</div>
+                                <div class="cvvInput">
+                                    <div class="cvvNumber">***</div>
+                                </div>
+                            </div>
+                            <div class="backLogoWrapper">
+                                <img class="backCardLogo" src="images/master-card-logo.png" alt="Master Card">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formFieldWrapper">
+                    <div class="formField">
+                        <span class="inputTitle">Card Number</span>
+                        <input class="form-control" id="cardNumber" type="text" name="cardNumber" maxlength="16"
+                            onkeypress='validate(event)'>
+                    </div>
+                    <div class="formField">
+                        <span class="inputTitle">Card Holder</span>
+                        <input class="form-control" id="cardHName" type="text" name="cardHName">
+                    </div>
+                    <div class="formField">
+                        <div class="fieldOne">
+                            <span class="inputTitle">Expiration Date</span>
+
+                            <select name="selectMonth" id="inputselectMonth" class="form-control">
+                                <option value="0">Month</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select name="selectYear" id="inputselectYear" class="form-control">
+                                <option value="0">Year</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                            </select>
+                        </div>
+                        <div class="fieldTwo">
+                            <span class="inputTitle">CVV</span>
+                            <input class="form-control" id="cvvNumber" type="text" name="cardCVV" maxlength="3">
+                        </div>
+                    </div>
+                </div>
+                <div class="submitBtnWrapper">
+                    <input class="form-control" type="button" id="formSubmit" name="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
